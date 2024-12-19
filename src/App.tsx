@@ -24,11 +24,11 @@ function App() {
   }
 
   return (
-    <div className="h-screen bg-black select-none">
+    <div className="min-h-screen bg-black select-none">
       <div className="text-white font-bold px-8 py-4 text-lg border-b border-neutral-700">
         <h1>Movie's Search</h1>
       </div>
-      <div className="flex flex-col gap-3 justify-center items-center mt-8 max-w-screen-lg px-10 mx-auto">
+      <div className="flex flex-col gap-3 justify-center items-center sm:mt-8 mt-4 max-w-screen-lg sm:px-10 px-5 mx-auto">
         <div className="relative w-full h-full">
           <Search className="w-5 h-5 text-gray-400 absolute top-[50%] translate-y-[-50%] left-4" />
           <input
@@ -39,7 +39,7 @@ function App() {
             placeholder="movie name"
           />
         </div>
-        <div className="border border-neutral-700 rounded-md overflow-hidden">
+        <div className="sm:border border-neutral-700 rounded-md overflow-hidden">
           {search ? (
             <MovieInfo data={data} />
           ) : (
